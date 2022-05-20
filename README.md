@@ -439,6 +439,7 @@ T d[10]; vector<T> e(d, d+10);      // e is initialized from d
 #include <deque>          // Include deque (std namespace)
 a.push_front(x);          // Puts x at a[0], shifts elements toward back
 a.pop_front();            // Removes a[0], shifts toward front
+a.front();                // Return reference to first element
 ```
 
 ## `utility` (pair)
