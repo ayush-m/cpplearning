@@ -143,6 +143,7 @@ T operator+(T x, T y);      // a+b (if type T) calls operator+(a, b)
 T operator-(T x);           // -a calls function operator-(a)
 T operator++(int);          // postfix ++ or -- (parameter ignored)
 extern "C" {void f();}      // f() was compiled in C
+bool f(){}                  // This will by default return true
 ```
 
 Function parameters and return values may be of any type. A function must either be declared or defined before
@@ -449,6 +450,8 @@ a.front();                // Return reference to first element
 pair<string, int> a("hello", 3);  // A 2-element struct
 a.first;                  // "hello"
 a.second;                 // 3
+pair<string, int> a;      // Pair with default empty values
+a = make_pair("chair", 5);
 ```
 
 ## `map` (associative array - usually implemented as binary search trees - avg. time complexity: O(log n))
