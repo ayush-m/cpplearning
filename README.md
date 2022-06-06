@@ -443,6 +443,37 @@ a.pop_front();            // Removes a[0], shifts toward front
 a.front();                // Return reference to first element
 ```
 
+## `priority_queue`
+
+```cpp
+#include <queue>          // Include queue (std namespace)
+priority_queue<int, vector<int>, greater<int>>pq      // It creates min priority queue by using default greater tempalate from #include <functional>
+priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>pq     // Note that here the comparator first compares first element
+priority_queue<int, vector<int>, comparator>pq  // Priority queue with custom comparator
+pq.top();          // Access top element
+pq.pop();            // Remove top element
+pq.push();                // Insert element
+```
+
+## `comparator class`
+A comparator should always return false when elements are equal
+```cpp
+class studentcompare {
+public:
+    // Comparator function
+    bool operator()(const student& a,
+                    const student& b)
+    {
+        // Compare on basis of roll number
+        if (a.rollnum < b.rollnum) {
+            return true;
+        }
+        return false;
+    }
+};
+```
+
+
 ## `utility` (pair)
 
 ```cpp
