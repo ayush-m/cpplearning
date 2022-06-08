@@ -237,6 +237,8 @@ private:                    // Section accessible only to T's member functions
 protected:                  // Also accessible to classes derived from T
 public:                     // Accessible to all
     int x;                  // Member data
+    int size=10;               // Member data initialized
+    vector<int> v = vector<int>(size, -1) // Class field Members can't be initialized in normal constructor way
     void f();               // Member function
     void g() {return;}      // Inline member function
     void h() const;         // Does not modify any data members
