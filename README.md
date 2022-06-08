@@ -404,6 +404,9 @@ if (f2) f2 << x;            // Write to file
 ```cpp
 #include <string>         // Include string (std namespace)
 string s1, s2="hello";    // Create strings
+s1.append("A");           // Append a new String to end of s1: s1="A"
+s1.append(s2);            // Append a string to end of s1: s1="Ahello"
+s1.pop_back();            // pop last character from string: s1="Ahell"
 s1.size(), s2.size();     // Number of characters: 0, 5
 s1 += s2 + ' ' + "world"; // Concatenation
 s1 == "hello world"       // Comparison, also <, >, !=, etc.
