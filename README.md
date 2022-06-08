@@ -265,10 +265,10 @@ T::l();                     // Call to static member
 T t;                        // Create object t implicit call constructor
 t.f();                      // Call method f on object t
 
-struct T {                  // ##Equivalent to: class T { public:
+struct T {                  // Equivalent to: class T { public:
   virtual void i();         // May be overridden at run time by derived class
   virtual void g()=0;       // Must be overridden (pure virtual)
-  T(){}                     // Constructor of a struct(Not that we have not written here public: )
+  T(){}                     // Constructor of a struct(Not that we have not written here public: since by default all members of struct are public)
 };
 class U: public T {         // Derived class U inherits all members of base T
   public:
